@@ -28,8 +28,20 @@ def load_data():
 
 
 @app.get("/solve")
-async def assign_gates():
-    flights, gates = load_data()
+async def assign_gates(scenario: str = "airport_data.json"):
+    # Security check: Ensure the file stays within the data directory
+    safe_name = Path(scenario).name
+    data_path = Path(__file__).parent / "data" / safe_name
+
+    if not data_path.exists():
+        raise HTTPException(status_code=404, detail="Scenario file not found")
+
+    with open(data_path, "r") as f:
+        raw = json.load(f)
+
+    flights = [Flight(**fl) for fl in raw["flights"]]
+    gates = [Gate(**g) for g in raw["gates"]]
+
     solution = solve_csp(flights, gates)
     min_required = calculate_min_gates(flights)
 
@@ -39,6 +51,7 @@ async def assign_gates():
             detail=f"No valid assignment found. Minimum gates required: {min_required}"
         )
 
+    # These must be indented inside the function
     result = []
     for flight in flights:
         gate_info = next(g for g in gates if g.gate_id == solution[flight.flight_id])

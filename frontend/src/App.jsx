@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { Chart } from "react-google-charts";
 
+
+
 function App() {
   const [assignments, setAssignments] = useState([]);
   const [chromaticNumber, setChromaticNumber] = useState(0);
   const [totalGates, setTotalGates] = useState(0);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState("table");
+  const [selectedScenario, setSelectedScenario] = useState("airport_data.json");
+  
+
+  
 
   const getDynamicColor = (str) => {
     let hash = 0;
@@ -27,7 +33,7 @@ function App() {
   const handleSolve = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/solve");
+      const response = await fetch(`http://localhost:8000/solve?scenario=${selectedScenario}`);
 
       if (!response.ok) {
         let errBody = {};
@@ -93,8 +99,25 @@ function App() {
 
   return (
     <div className="container-fluid py-5 overflow-hidden">
-      <div className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
-        <h2 className="fw-bold text-secondary">Airport Gate System</h2>
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 border-bottom pb-3">
+        <h2 className="fw-bold text-secondary mb-2">Airport Gate System</h2>
+        <section>
+          <div className="d-flex gap-3 align-items-center mb-2">
+                    {/* Scenario Selector */}
+                    <select 
+                      className="form-select w-auto" 
+                      value={selectedScenario} 
+                      onChange={(e) => setSelectedScenario(e.target.value)}
+                    >
+                      <option value="airport_data.json">Scenario 1: Normal</option>
+                      <option value="airport_data_2.json">Scenario 2: Peak</option>
+                      <option value="airport_data_3.json">Scenario 3: Restricted</option>
+                    </select>
+          
+                    
+                  </div>
+        
+        </section>
         <button
           className="btn btn-primary"
           onClick={handleSolve}
