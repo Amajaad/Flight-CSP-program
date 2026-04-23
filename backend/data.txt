@@ -1,0 +1,9 @@
+File 1:Mid Morning peak
+ a Mid-Morning Peak scenario characterized by high Turkish Airlines volume and a surge of arrivals
+between 08:00 and 10:45.
+
+File 2: Regional Airport (Light Traffic)
+This set features smaller aircraft and fewer gates, typical of a domestic or regional branch.
+
+File 3: Evening Peak (Heavy Rotation)
+This set focuses on a tight window of evening arrivals and departures.

@@ -1,0 +1,46 @@
+
+{
+  "flights": [
+    {
+      "flight_id": "LH202",
+      "arrival": "18:00",
+      "departure": "19:30",
+      "aircraft_size": "Medium",
+      "airline": "Lufthansa"
+    },
+    {
+      "flight_id": "AF303",
+      "arrival": "18:15",
+      "departure": "19:45",
+      "aircraft_size": "Medium",
+      "airline": "Air France"
+    },
+    {
+      "flight_id": "BA111",
+      "arrival": "18:45",
+      "departure": "20:15",
+      "aircraft_size": "Large",
+      "airline": "British Airways"
+    },
+    {
+      "flight_id": "TK505",
+      "arrival": "19:10",
+      "departure": "20:30",
+      "aircraft_size": "Large",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "QR808",
+      "arrival": "20:00",
+      "departure": "21:45",
+      "aircraft_size": "Large",
+      "airline": "Qatar Airways"
+    }
+  ],
+  "gates": [
+    { "gate_id": "INT-01", "max_size": "Large",  "terminal": "Main" },
+    { "gate_id": "INT-02", "max_size": "Large",  "terminal": "Main" },
+    { "gate_id": "DOM-01", "max_size": "Medium", "terminal": "Annex" },
+    { "gate_id": "DOM-02", "max_size": "Large", "terminal": "Annex" }
+  ]
+}

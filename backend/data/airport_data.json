@@ -1,0 +1,118 @@
+{
+  "flights": [
+    {
+      "flight_id": "TK101",
+      "arrival": "08:00",
+      "departure": "09:30",
+      "aircraft_size": "Small",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "TK102",
+      "arrival": "08:15",
+      "departure": "09:45",
+      "aircraft_size": "Large",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "AJ204",
+      "arrival": "08:30",
+      "departure": "10:15",
+      "aircraft_size": "Medium",
+      "airline": "AJet"
+    },
+    {
+      "flight_id": "TK105",
+      "arrival": "09:00",
+      "departure": "10:30",
+      "aircraft_size": "Small",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "PC301",
+      "arrival": "09:20",
+      "departure": "10:50",
+      "aircraft_size": "Medium",
+      "airline": "Pegasus"
+    },
+    {
+      "flight_id": "LH400",
+      "arrival": "09:40",
+      "departure": "11:20",
+      "aircraft_size": "Large",
+      "airline": "Lufthansa"
+    },
+    {
+      "flight_id": "TK201",
+      "arrival": "10:00",
+      "departure": "11:30",
+      "aircraft_size": "Small",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "BA505",
+      "arrival": "10:15",
+      "departure": "12:00",
+      "aircraft_size": "Large",
+      "airline": "British Airways"
+    },
+    {
+      "flight_id": "AF600",
+      "arrival": "10:45",
+      "departure": "12:15",
+      "aircraft_size": "Medium",
+      "airline": "Air France"
+    },
+    {
+      "flight_id": "PC305",
+      "arrival": "11:00",
+      "departure": "12:30",
+      "aircraft_size": "Small",
+      "airline": "Pegasus"
+    },
+    {
+      "flight_id": "TK302",
+      "arrival": "11:30",
+      "departure": "13:00",
+      "aircraft_size": "Large",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "QR707",
+      "arrival": "12:00",
+      "departure": "13:45",
+      "aircraft_size": "Large",
+      "airline": "Qatar Airways"
+    },
+    {
+      "flight_id": "AJ208",
+      "arrival": "12:15",
+      "departure": "13:30",
+      "aircraft_size": "Small",
+      "airline": "AJet"
+    },
+    {
+      "flight_id": "TK405",
+      "arrival": "12:30",
+      "departure": "14:00",
+      "aircraft_size": "Medium",
+      "airline": "Turkish Airlines"
+    },
+    {
+      "flight_id": "PC401",
+      "arrival": "13:00",
+      "departure": "14:30",
+      "aircraft_size": "Small",
+      "airline": "Pegasus"
+    }
+  ],
+  "gates": [
+    { "gate_id": "G01", "max_size": "Small",  "terminal": "Terminal A" },
+    { "gate_id": "G02", "max_size": "Small",  "terminal": "Terminal A" },
+    { "gate_id": "G03", "max_size": "Medium", "terminal": "Terminal A" },
+    { "gate_id": "G04", "max_size": "Medium", "terminal": "Terminal B" },
+    { "gate_id": "G05", "max_size": "Large",  "terminal": "Terminal B" },
+    { "gate_id": "G06", "max_size": "Large",  "terminal": "Terminal B" },
+    { "gate_id": "G07", "max_size": "Large",  "terminal": "Terminal C" }
+  ]
+}
