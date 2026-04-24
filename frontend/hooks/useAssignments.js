@@ -9,7 +9,9 @@ export const useAssignments = () => {
   const solve = async (scenario) => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/solve?scenario=${scenario}`);
+      const res = await fetch(
+        `https://flight-csp-program.onrender.com/solve?scenario=${scenario}`,
+      );
       const data = await res.json();
 
       setAssignments(data.assignments || []);

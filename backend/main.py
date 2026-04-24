@@ -11,7 +11,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace "*" with your React URL
+    allow_origins=["https://flight-csp.netlify.app/"],  # In production, replace "*" with your React URL
     allow_methods=["*"],
     allow_headers=["*"],
 )
