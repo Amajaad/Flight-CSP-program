@@ -10,9 +10,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
+    # Add your specific Netlify URL here
     allow_origins=[
-        "https://flight-csp.netlify.app"
-    ],  # In production, replace "*" with your React URL
+        "https://flight-csp.netlify.app", 
+        "http://localhost:3000", # Keep this for local testing
+        "http://localhost:5173"  # Common for Vite users
+    ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
