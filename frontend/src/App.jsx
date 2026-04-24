@@ -141,7 +141,7 @@ function App() {
         {activeTab === "matrix" && assignments.length > 0 && (
           <div className="card shadow-sm">
             <div className="card-body">
-              <h5 className="mb-3">Overlap Adjacency Matrix</h5>
+            
               <ConflictMatrix assignments={assignments} />
             </div>
           </div>
