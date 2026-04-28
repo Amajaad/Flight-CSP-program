@@ -3,11 +3,11 @@ const COLOR_PALETTE = [
   "hsl(0, 70%, 45%)",      // Red
   "hsl(240, 70%, 45%)",    // Blue
   "hsl(120, 70%, 45%)",    // Green
-  "hsl(60, 70%, 45%)",     // Yellow
+  "hsl(60, 70%, 75%)",     // Yellow
   "hsl(300, 70%, 45%)",    // Magenta
   "hsl(180, 70%, 45%)",    // Cyan
   "hsl(30, 70%, 45%)",     // Orange
-  "hsl(270, 70%, 45%)",    // Purple
+  "hsl(270, 10%, 45%)",    // Purple
 ];
 
 let gateColors = {}; // Store gate -> color mapping
