@@ -5,6 +5,7 @@ import ConflictMatrix from "../components/ConflictMatrix";
 import GanttView from "../components/GanttView";
 import { buildGanttData } from "../utils/gantt";
 import { setAssignmentsForColoring } from "../utils/color";
+import GraphView from "../components/GraphView";
 
 function App() {
   const [scenario, setScenario] = useState("airport_data.json");
@@ -119,6 +120,16 @@ function App() {
             Conflict Matrix
           </button>
         </li>
+
+        <li className="nav-item">
+          <button
+            className={`nav-link ${activeTab === "graph" ? "active" : ""}`}
+            onClick={() => setActiveTab("graph")}
+            disabled={!assignments.length}
+          >
+            Conflicts Graph
+          </button>
+        </li>
       </ul>
 
       {/* TAB CONTENT */}
@@ -145,8 +156,14 @@ function App() {
         {activeTab === "matrix" && assignments.length > 0 && (
           <div className="card shadow-sm">
             <div className="card-body">
-            
               <ConflictMatrix assignments={assignments} />
+            </div>
+          </div>
+        )}
+        {activeTab === "graph" && assignments.length > 0 && (
+          <div className="card shadow-sm">
+            <div className="card-body">
+              <GraphView assignments={assignments} />
             </div>
           </div>
         )}
