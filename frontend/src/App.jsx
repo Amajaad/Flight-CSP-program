@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useMemo } from "react";
 import { useAssignments } from "../hooks/useAssignments";
 import AssignmentTable from "../components/AssignmentTable";
