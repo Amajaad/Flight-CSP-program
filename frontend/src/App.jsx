@@ -4,6 +4,7 @@ import AssignmentTable from "../components/AssignmentTable";
 import ConflictMatrix from "../components/ConflictMatrix";
 import GanttView from "../components/GanttView";
 import { buildGanttData } from "../utils/gantt";
+import { setAssignmentsForColoring } from "../utils/color";
 
 function App() {
   const [scenario, setScenario] = useState("airport_data.json");
@@ -20,6 +21,9 @@ function App() {
         alert(
           `Constraint Error: Needs at least ${data.chromatic_number} gates.`,
         );
+      } else if (data.assignments && data.assignments.length > 0) {
+        // Initialize graph coloring with assignments
+        setAssignmentsForColoring(data.assignments);
       }
     } catch {
       alert("Backend error");
